@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins";
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.active-nav::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  @apply bg-primary-500 -bottom-1 rounded-full left-1/2 -translate-x-1/2 transition-all duration-200;
+}
+
+.active-nav:hover::after {
+  width: 20px;
+}
