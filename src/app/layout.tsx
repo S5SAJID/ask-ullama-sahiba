@@ -26,9 +26,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta name="google-site-verification" content="dZRCkzgnNwmocmkNFYcH-Ehjdet8g0l8My4ndaeOGAs" />
-      </head>
       <body >{children}</body> {/** REMOVED `className={inter.className}` */}
     </html>
   );
