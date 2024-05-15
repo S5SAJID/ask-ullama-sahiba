@@ -1,6 +1,5 @@
 import Footer from "@/components/globals/Footer";
 import Navbar from "@/components/globals/Navbar";
-import Posts from '@/data/data.json' assert { type: 'json' };
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,8 +10,7 @@ export const metadata: Metadata = {
       "/assets/images/favicon.png"
   ],
   authors: [
-      // FIX: FIX THE CHANNEL NAME
-      { name: "Assim al Hakeem", url: "https://youtube.com/channelname" },
+      { name: "Assim al Hakeem", url: "https://www.youtube.com/@assimalhakeem" },
       { name: "S5 SAJID", url: "https://s5sajid.github.io" },
   ]
 };

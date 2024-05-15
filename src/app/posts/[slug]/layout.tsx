@@ -10,8 +10,7 @@ export const generateMetadata = ({params}: {params: any}): Metadata => {
     keywords: [...post?.tags as string[], 'Ask Ullama Sahiba', 'Ullama', "Islamic Scholars", "Islamic QA", "Islamic Questions & answers"],
     description: `Question: ${post?.question}. Answer by ${post?.author.split("-").join(" ")} : ${post?.answer}`,
     authors: [
-      // FIX: FIX THE CHANNEL NAME
-      {name: post?.author.split("-").join(" "), url: "https://youtube.com/channelname"},
+      {name: post?.author.split("-").join(" "), url: "https://www.youtube.com/@assimalhakeem"},
       {name: "S5 SAJID", url: "https://s5sajid.github.io"},
     ]
   }
