@@ -17,7 +17,7 @@ export default function PostPage({ params }: { params: any }) {
                   <img
                     className="mr-4 w-16 h-16 rounded-full"
                     src={`/assets/images/ullama/${post.author}.png`}
-                    alt="Jese Leos"
+                    alt="Picture of Ullama Sahib"
                   />
                   <div>
                     <a
@@ -28,7 +28,7 @@ export default function PostPage({ params }: { params: any }) {
                       {post.author.split("-").join(" ")}
                     </a>
                     <p className="text-base text-gray-500 dark:text-gray-400">
-                      Islamic Scholar, educator &amp; CEO Flowbite
+                      Islamic Scholar, educator.
                     </p>
                     <p className="text-base text-gray-500 dark:text-gray-400">
                       <time
