@@ -7,7 +7,7 @@ export default function Navbar({active='home'}: {active?: string}) {
     let [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <nav className="bg-white/50 backdrop-blur fixed left-0 right-0 top-0 border-b border-neutral-600/40 dark:bg-gray-900/50">
+        <nav className="bg-white/50 backdrop-blur fixed z-10 left-0 right-0 top-0 border-b border-neutral-600/40 dark:bg-gray-900/50">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"><span className="bg-gradient-to-tr from-primary-400 to-primary-100 bg-clip-text text-transparent">Ask</span> Ullama Sahiba</span>

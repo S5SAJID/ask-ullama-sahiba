@@ -2,13 +2,13 @@ import Posts from '@/data/data.json' assert { type: 'json' };
 import { notFound } from 'next/navigation';
 
 export default function PostPage({ params }: { params: any }) {
-  const post = Posts.find(e => e.url.toLowerCase() == params['slug'].toLowerCase());
+  const post = Posts.find(e => e.url.replaceAll("/", "").toLowerCase() == params['slug'].toLowerCase());
   if (!post) {
     notFound()
   }
   return (
     <>
-      <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 antialiased">
+      <main className="min-h-[80vh] relative z-[2] pb-16 pt-16 lg:pb-24 antialiased">
         <div className="flex justify-between px-4 mx-auto max-w-screen-xl ">
           <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
             <header className="mb-4 lg:mb-6 not-format">
@@ -42,8 +42,8 @@ export default function PostPage({ params }: { params: any }) {
                   </div>
                 </div>
               </address>
-              <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
-                {post.title}
+              <h1 className="mb-4 font-semibold leading-tight text-gray-900 lg:mb-6 text-xl dark:text-white">
+                {post.question}
               </h1>
             </header>
             <div className='text-black dark:text-neutral-100'>
@@ -53,6 +53,7 @@ export default function PostPage({ params }: { params: any }) {
               </div>
 
               <div className="answer mt-5">
+              <p className='bg-primary-400/10 inline-block px-1 rounded'>Answer</p>
               {post.answer.split("\n").map((paragraph, index) => <p className='mt-3' key={index}>{paragraph}</p>)}
               </div>
             </div>

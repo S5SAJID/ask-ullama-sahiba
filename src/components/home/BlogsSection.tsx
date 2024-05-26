@@ -1,7 +1,15 @@
 import PostCard from "../sub-components/PostCard";
 import Posts from '@/data/data.json' assert { type: 'json' };
 
-export default function BlogsSection() {
+type BlogsSectionProps = {
+  maxPosts?: number,
+}
+
+export default function BlogsSection(props: BlogsSectionProps) {
+  let data = Posts;
+  if (props.maxPosts) {
+    data = Posts.slice(0, props.maxPosts)
+  }
   return (
     <section className="bg-white  overflow-hidden dark:bg-gray-900">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
@@ -15,7 +23,7 @@ export default function BlogsSection() {
         </div>
         <div className="grid gap-8 lg:grid-cols-2">
           {
-            Posts.map((post, index) => <PostCard post={post} key={index}  />)
+            data.map((post, index) => <PostCard post={post} key={index}  />)
           }
         </div>
       </div>

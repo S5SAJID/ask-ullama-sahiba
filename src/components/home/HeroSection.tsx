@@ -1,7 +1,10 @@
+import NeonLight from "../globals/NeonLight";
+
 export default function HeroSection() {
     return (
         <section className="bg-neutral-50 pb-16 pt-40 dark:bg-gray-800">
-            <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+            <NeonLight />
+            <div className="py-8 px-4 mx-auto relative z-[2] max-w-screen-xl text-center lg:py-16 lg:px-12">
                 <p
                     className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-200 rounded-full dark:bg-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
                 >
